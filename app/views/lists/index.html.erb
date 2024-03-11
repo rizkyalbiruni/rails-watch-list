@@ -2,6 +2,8 @@
 
 <ol>
   <% @lists.each do |list| %>
-  <li><%= list.name %></li>
+  <li><%= link_to list.name, list_path(list) %></li>
   <% end %>
 </ol>
+
+<%= link_to "Add a List", new_list_path %>
